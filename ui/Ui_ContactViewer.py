@@ -41,7 +41,7 @@ class Ui_ContactViewer(object):
         self.contactName = QtWidgets.QLabel(ContactViewer)
         self.contactName.setGeometry(QtCore.QRect(55, 45, 261, 31))
         font = QtGui.QFont()
-        font.setPointSize(24)
+        font.setPointSize(20)
         self.contactName.setFont(font)
         self.contactName.setText("")
         self.contactName.setAlignment(QtCore.Qt.AlignCenter)

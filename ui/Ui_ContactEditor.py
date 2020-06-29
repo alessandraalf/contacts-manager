@@ -93,7 +93,7 @@ class Ui_ContactEditor(object):
         self.contactName = QtWidgets.QLabel(ContactEditor)
         self.contactName.setGeometry(QtCore.QRect(55, 45, 261, 31))
         font = QtGui.QFont()
-        font.setPointSize(24)
+        font.setPointSize(20)
         self.contactName.setFont(font)
         self.contactName.setText("")
         self.contactName.setAlignment(QtCore.Qt.AlignCenter)

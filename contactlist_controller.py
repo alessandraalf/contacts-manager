@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QSize
+from PyQt5 import QtGui
 
 from ui.Ui_ContactList import Ui_ContactList
 
@@ -19,11 +20,18 @@ class ContactList(QWidget):
         self.view = Ui_ContactList()
         self.view.setupUi(self)
 
+        self.addContactIcon()
         self.buttonBehavior()
         self.inputChanged()
         self.showAllContacts()
         self.showFields()
         self.showTags()
+
+    # add contact icon to add QPushButton
+    def addContactIcon(self):
+        addIcon = QtGui.QPixmap("icon/addcontact.png")
+        self.view.add_button.setIcon(QtGui.QIcon(addIcon))
+        self.view.add_button.setIconSize(QSize(32, 32))
 
     # define buttons behaviour.
     def buttonBehavior(self):
