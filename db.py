@@ -54,7 +54,7 @@ class Db:
     # add a contact in database
     def addContact(self, first_name, last_name, tel, email, url, notes):
         conn = self.connection
-        conn.execute("INSERT OR INTO Contacts "
+        conn.execute("INSERT INTO Contacts "
                      "VALUES(NULL,?,?,?,?,?,?)", (first_name, last_name, tel, email, url, notes))
         conn.commit()
 
